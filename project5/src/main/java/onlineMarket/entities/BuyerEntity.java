@@ -8,10 +8,6 @@ import javax.persistence.Id;
 @Entity
 public class BuyerEntity extends UserEntity 
 {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer BuyerId; 
-	
 	public BuyerEntity() {}
 	public BuyerEntity(String email,String pass)
 	{

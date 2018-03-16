@@ -5,8 +5,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Form</h1>
-    <form th:action="@{/addBrand}" th:object="${brand}" method="post">
+	<h1>Add Brand Form</h1>
+    <form th:action="@{/AddBrand}" th:object="${brand}" method="post">
         name: <input type="text" th:field="*{name}" />
         description: <input type="text" th:field="*{descreption}" />
         <input type="submit" value="Submit" />

@@ -5,15 +5,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-hiiiiii
-  
-<h1>Form</h1>
-    <form th:action="@{/Register}" th:object="${user}" method="post">
-        Email: <input type="text" th:field="*{email}" />
-        password: <input type="password" th:field="*{password}" />
-        <input type="submit" value="Submit" />
+	<form th:action="@{/SellerRegister}" method="get">
+        <input type="submit" value="Seller Register" />
     </form>
-    
-</body>
+    <form th:action="@{/BuyerRegister}" method="get">
+        <input type="submit" value="Buyer Register" />
+    </form>
+	<form th:action="@{/}" method="get">
+        <input type="submit" value="Back" />
+    </form>
+</body> 
 </html>

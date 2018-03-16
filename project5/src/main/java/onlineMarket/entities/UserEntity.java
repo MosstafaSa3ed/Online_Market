@@ -1,15 +1,14 @@
 package onlineMarket.entities;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
+@Entity
 public class UserEntity {
+	@Id
+	private String Email;
 	
-	private String Email,Password;
-	
+	private String Password;
 	public UserEntity()
 	{
 		Email = "";

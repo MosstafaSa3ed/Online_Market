@@ -1,10 +1,10 @@
 package onlineMarket.repositories;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-import onlineMarket.entities.ProductEntity;
 import onlineMarket.entities.SysProductEntity;
-
-public interface SysProductRepository extends CrudRepository<SysProductEntity,Integer>{
+@Repository
+public interface SysProductRepository extends CrudRepository<SysProductEntity,String>{
 
 }

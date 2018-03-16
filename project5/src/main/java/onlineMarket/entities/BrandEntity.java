@@ -8,18 +8,9 @@ import javax.persistence.Id;
 @Entity
 public class BrandEntity {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer BrandId;
-	private String name,descreption;
+	private String name;
+	private String descreption;
 	
-	public Integer getBrandId() {
-		return BrandId;
-	}
-
-	public void setBrandId(Integer brandId) {
-		BrandId = brandId;
-	}
-
 	public String getName() {
 		return name;
 	}
