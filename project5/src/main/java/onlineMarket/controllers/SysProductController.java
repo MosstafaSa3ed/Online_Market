@@ -1,34 +1,58 @@
 package onlineMarket.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import onlineMarket.entities.SysProductEntity;
+import onlineMarket.entities.UserEntity;
 import onlineMarket.repositories.BrandRepository;
 import onlineMarket.repositories.SysProductRepository;
 
-@Controller
+@RestController
+@RequestMapping("/sysprod")
+
 public class SysProductController {
 	@Autowired
 	SysProductRepository SysProductRepo;
+
 	@Autowired
 	BrandRepository BrandRepo;
 	
-	@PostMapping("/AddSysProd")
-	public String addProd(@ModelAttribute SysProductEntity sysProd,Model model)
+	@RequestMapping("add/{name}/{brand}/{LowPrice}/{HighPrice}")
+	public ResponseEntity<SysProductEntity> add(@PathVariable String name , @PathVariable String brand,@PathVariable double LowPrice , @PathVariable double HighPrice)
 	{
-		model.addAttribute("SysProd", new SysProductEntity());
-		if(!SysProductRepo.exists(sysProd.getName()) && BrandRepo.exists(sysProd.getBrand()) ) {
-			SysProductRepo.save(sysProd);
-			return "AdminHome";
+		SysProductEntity sys= new SysProductEntity(name,brand,LowPrice,HighPrice);
+		SysProductEntity pro;
+		pro= SysProductRepo.findByNameInAndBrandIn(name,brand);
+		if(name!=null && brand!=null && LowPrice>=0.0 && HighPrice>=10 && pro==null && BrandRepo.exists(brand))
+		{
+			SysProductRepo.save(sys);
+			return new ResponseEntity<SysProductEntity>(sys, HttpStatus.OK);
 		}
-		
-		return "AddSysProd";
+		return new ResponseEntity<SysProductEntity>(sys, HttpStatus.BAD_REQUEST);
 	}
 	
+	
+//	@PostMapping("/AddSysProd")
+//	public String addProd(@ModelAttribute SysProductEntity sysProd,Model model)
+//	{
+//		model.addAttribute("SysProd", new SysProductEntity());
+//		if(!SysProductRepo.exists(sysProd.getName()) && BrandRepo.exists(sysProd.getBrand()) ) {
+//			SysProductRepo.save(sysProd);
+//			return "AdminHome";
+//		}
+//		
+//		return "AddSysProd";
+//	}
+//	
 	
 	
 }

@@ -7,8 +7,8 @@ import javax.persistence.Id;
 public class UserEntity {
 	@Id
 	private String Email;
-	
 	private String Password;
+	
 	public UserEntity()
 	{
 		Email = "";

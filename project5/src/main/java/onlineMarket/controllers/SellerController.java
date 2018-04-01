@@ -1,64 +1,65 @@
 package onlineMarket.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import onlineMarket.entities.BuyerEntity;
 import onlineMarket.entities.ProductEntity;
 import onlineMarket.entities.SellerEntity;
 import onlineMarket.entities.StoreEntity;
 import onlineMarket.entities.SysProductEntity;
+import onlineMarket.entities.UserEntity;
 import onlineMarket.repositories.SellerRepository;
 
-@Controller
+@RestController
+@RequestMapping("/sellers")
 public class SellerController {
 	public static SellerEntity sell;
 	public static SysProductEntity sysProd;
+	
 	@Autowired
 	SellerRepository SellerRepo;
-	@GetMapping("/SellerRegister")
-	public String Register(Model model)
+	
+	@RequestMapping("/reg/{email}/{pass}")
+	public ResponseEntity<UserEntity> Register(@PathVariable String email,@PathVariable String pass)
 	{
-		model.addAttribute("seller", new SellerEntity());
-		return "SellerRegister";
-	}
-	@PostMapping("/SellerRegister")
-	public String SellerRegister(@ModelAttribute SellerEntity seller,Model model)
-	{
-		sell=seller;
-		model.addAttribute("seller", new SellerEntity());
-		if(SellerRepo.exists(seller.getEmail()))
+		UserEntity sellObj= new SellerEntity(email,pass);
+		if(email!=null && pass!=null && !SellerRepo.exists(sellObj.getEmail()))
 		{
-			return "SellerRegister";
+			SellerRepo.save(sellObj);
+			return new ResponseEntity<UserEntity>(sellObj, HttpStatus.OK);
 		}
-		SellerRepo.save(seller);
-		return "SellerHome";
+		return new ResponseEntity<UserEntity>(sellObj, HttpStatus.BAD_REQUEST);
 	}
 	
-	@GetMapping("/SellerLogin")
-	public String Login(Model model)
+	
+	@RequestMapping("/log/{email}/{pass}")
+	public ResponseEntity<UserEntity> login(@PathVariable String email, @PathVariable String pass)
 	{
-		model.addAttribute("seller", new SellerEntity());
-		return "SellerLogin";
-	}
-	@PostMapping("/SellerLogin")
-	public String SellerLogin(@ModelAttribute SellerEntity seller,Model model)
-	{
-		sell=seller;
-		model.addAttribute("seller", new SellerEntity());
-		
-		if(SellerRepo.exists(seller.getEmail()))
+		UserEntity s = null;
+		UserEntity sellObj= new SellerEntity(email,pass);
+		if(email!=null && pass!=null && SellerRepo.exists(sellObj.getEmail()))
 		{
-			SellerEntity temp= (SellerEntity) SellerRepo.findOne(seller.getEmail());
-			if(seller.getPassword().equals(temp.getPassword()))
-				return "SellerHome";
+			s= (SellerEntity) SellerRepo.findOne(sellObj.getEmail());
+			if(s.getPassword().equals(sellObj.getPassword()) )
+			{
+				return new ResponseEntity<UserEntity>(s, HttpStatus.OK);
+			}
 		}
-		return "SellerLogin";
+		return new ResponseEntity<UserEntity>(s, HttpStatus.BAD_REQUEST);
 	}
+//////////////////////////////////////////
+	
 	@GetMapping("/AddStore")
 	public String addStore(Model model)
 	{

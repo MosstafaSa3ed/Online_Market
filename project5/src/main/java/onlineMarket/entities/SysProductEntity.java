@@ -7,22 +7,34 @@ import javax.persistence.Id;
 @Entity
 public class SysProductEntity {
 	@Id
-	private String Name;
-	private String Brand;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
+	private String name;
+	private String brand;
 	private double LowPrice,HighPrice;
 
-
+	public SysProductEntity() {
+		name=null;
+		// TODO Auto-generated constructor stub
+	}
+	public SysProductEntity(String name, String brand, double lowPrice, double highPrice) {
+		super();
+		this.name = name;
+		this.brand = brand;
+		LowPrice = lowPrice;
+		HighPrice = highPrice;
+	}
 	public String getName() {
-		return Name;
+		return name;
 	}
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 	public String getBrand() {
-		return Brand;
+		return brand;
 	}
 	public void setBrand(String brand) {
-		Brand = brand;
+		this.brand = brand;
 	}
 	public double getLowPrice() {
 		return LowPrice;

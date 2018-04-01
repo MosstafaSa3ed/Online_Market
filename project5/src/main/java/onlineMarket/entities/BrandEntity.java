@@ -15,6 +15,12 @@ public class BrandEntity {
 		return name;
 	}
 
+	public BrandEntity(String name, String descreption) {
+		super();
+		this.name = name;
+		this.descreption = descreption;
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}

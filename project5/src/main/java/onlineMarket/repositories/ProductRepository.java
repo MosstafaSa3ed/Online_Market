@@ -1,5 +1,8 @@
 package onlineMarket.repositories;
 
+import java.util.List;
+import java.util.Vector;
+
 import javax.transaction.Transactional;
 
 import org.springframework.data.jpa.repository.Modifying;
@@ -12,9 +15,13 @@ import onlineMarket.entities.ProductEntity;
 @Repository
 public interface ProductRepository extends CrudRepository<ProductEntity,Integer> {
 
-	/*@Transactional 
-	@Modifying(clearAutomatically = true)
-	@Query("UPDATE product_entity p SET p.counter = p.counter+1 WHERE p.store_name = :sname and name= :name")
-	public void UpdateCounter(@Param("sname") String sname, @Param("name") String name);
-		*/
+	public  ProductEntity  findByNameInAndStoreNameIn(String name,String storeName);
+	public List<ProductEntity> findByStoreNameIn(String StoreName);
+	@Modifying
+	@Query("update ProductEntity p set p.counter = :counter  where p.storeName = :storeName and name= :name")
+	int SetCounterForProductEntity(@Param("counter") int counter);
+	
+	@Modifying
+	@Query("update ProductEntity p set p.soldCounter = :soldCounter  where p.storeName = :storeName and name= :name")
+	int SetsoldCounterForProductEntity(@Param("soldCounter") int soldCounter);
 }

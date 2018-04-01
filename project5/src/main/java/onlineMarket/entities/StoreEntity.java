@@ -6,27 +6,35 @@ import javax.persistence.Id;
 public class StoreEntity 
 {
 	@Id
-	private String Name;
-	private String SellerName;
-	private String Location;
+	private String name;
+	private String sellerName;
+	private String location;
 	private String type;
+	public StoreEntity() {}
+	public StoreEntity(String N,String S,String L,String T)
+	{
+		name=N;
+		sellerName=S;
+		location=L;
+		type=T;
+	}
 	public String getName() {
-		return Name;
+		return name;
 	}
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 	public String getSellerName() {
-		return SellerName;
+		return sellerName;
 	}
 	public void setSellerName(String sellerName) {
-		SellerName = sellerName;
+		this.sellerName = sellerName;
 	}
 	public String getLocation() {
-		return Location;
+		return location;
 	}
 	public void setLocation(String location) {
-		Location = location;
+		this.location = location;
 	}
 	public String getType() {
 		return type;
