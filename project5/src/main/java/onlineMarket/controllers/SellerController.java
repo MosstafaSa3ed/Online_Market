@@ -1,10 +1,12 @@
 package onlineMarket.controllers;
 
+import org.apache.coyote.http2.Setting;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +25,7 @@ import onlineMarket.repositories.SellerRepository;
 
 @RestController
 @RequestMapping("/sellers")
+@CrossOrigin(origins="http://localhost:3000",allowedHeaders="*")
 public class SellerController {
 	public static SellerEntity sell;
 	public static SysProductEntity sysProd;
@@ -30,21 +33,24 @@ public class SellerController {
 	@Autowired
 	SellerRepository SellerRepo;
 	
-	@RequestMapping("/reg/{email}/{pass}")
-	public ResponseEntity<UserEntity> Register(@PathVariable String email,@PathVariable String pass)
+	@RequestMapping("/Sregister/{email}/{pass}")
+	public boolean Register(@PathVariable String email,@PathVariable String pass)
 	{
+		//return email;
 		UserEntity sellObj= new SellerEntity(email,pass);
 		if(email!=null && pass!=null && !SellerRepo.exists(sellObj.getEmail()))
 		{
+			System.out.println("Hello");
+			System.out.println("----"+sellObj.getEmail()+" "+sellObj.getPassword());
 			SellerRepo.save(sellObj);
-			return new ResponseEntity<UserEntity>(sellObj, HttpStatus.OK);
+			return true;
 		}
-		return new ResponseEntity<UserEntity>(sellObj, HttpStatus.BAD_REQUEST);
+		return false;
 	}
 	
 	
-	@RequestMapping("/log/{email}/{pass}")
-	public ResponseEntity<UserEntity> login(@PathVariable String email, @PathVariable String pass)
+	@GetMapping("/login/{email}/{pass}")
+	public boolean login(@PathVariable String email, @PathVariable String pass)
 	{
 		UserEntity s = null;
 		UserEntity sellObj= new SellerEntity(email,pass);
@@ -53,14 +59,14 @@ public class SellerController {
 			s= (SellerEntity) SellerRepo.findOne(sellObj.getEmail());
 			if(s.getPassword().equals(sellObj.getPassword()) )
 			{
-				return new ResponseEntity<UserEntity>(s, HttpStatus.OK);
+				return true;
 			}
 		}
-		return new ResponseEntity<UserEntity>(s, HttpStatus.BAD_REQUEST);
+		return false;
 	}
 //////////////////////////////////////////
 	
-	@GetMapping("/AddStore")
+	/*@GetMapping("/AddStore")
 	public String addStore(Model model)
 	{
 		model.addAttribute("store", new StoreEntity());
@@ -73,5 +79,5 @@ public class SellerController {
 		System.out.println("hello");
 		model.addAttribute("prod", new ProductEntity());
 		return "AddProd";
-	}
+	}*/
 }

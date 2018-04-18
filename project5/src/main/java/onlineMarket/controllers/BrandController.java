@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,21 +21,21 @@ import onlineMarket.repositories.BrandRepository;
 
 @RestController
 @RequestMapping("/brand")
-
+@CrossOrigin(origins="http://localhost:3000",allowedHeaders="*")
 public class BrandController {
 	@Autowired
 	private BrandRepository BrandRepo;
 	
 	@RequestMapping("add/{name}/{descreption}")
-	public ResponseEntity<BrandEntity> add(@PathVariable String name , @PathVariable String descreption)
+	public boolean add(@PathVariable String name , @PathVariable String descreption)
 	{
 		BrandEntity brand= new BrandEntity(name,descreption);
 		if(name!=null && descreption!=null && !BrandRepo.exists(name))
 		{
 			BrandRepo.save(brand);
-			return new ResponseEntity<BrandEntity>(brand, HttpStatus.OK);
+			return true;
 		}
-		return new ResponseEntity<BrandEntity>(brand, HttpStatus.BAD_REQUEST);
+		return false;
 	}
 //	@PostMapping("/AddBrand")
 //	public String addBrand(@ModelAttribute BrandEntity brand,Model model)

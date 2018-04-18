@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,7 +23,7 @@ import onlineMarket.repositories.BuyerRepository;
 
 @RestController
 @RequestMapping("/buyers")
-
+@CrossOrigin(origins="http://localhost:3000",allowedHeaders="*")
 public class BuyerController {
 	
 	
@@ -42,22 +43,24 @@ public class BuyerController {
 		return (UserEntity)BuyerRepo.findOne(email);
 	}
 	//////////register /////
-	@PostMapping("/reg")
-	public BuyerEntity Register(@RequestBody BuyerEntity buy)
+	@PostMapping("/Bregister/{email}/{pass}")
+	public boolean Register(@PathVariable String email,@PathVariable String pass)
 	{
-		//UserEntity buy = new BuyerEntity(email,pass);
+		UserEntity buy = new BuyerEntity(email,pass);
 		if(buy.getEmail()!=null && buy.getPassword()!=null && !BuyerRepo.exists(buy.getEmail()))
 		{
-			
-			return BuyerRepo.save(buy);
+			System.out.println("Hello");
+			System.out.println(buy.getEmail()+" "+buy.getPassword());
+			BuyerRepo.save(buy);
+			return true;
 		}
-		return null;
+		return false;
 	}
 	
 	
 //////////login /////
-@RequestMapping("log/{email}/{pass}")
-public ResponseEntity<UserEntity> Login(@PathVariable String email , @PathVariable String pass)
+@GetMapping("login/{email}/{pass}")
+public boolean Login(@PathVariable String email , @PathVariable String pass)
 {
 	UserEntity b = null;
 	UserEntity buy = new BuyerEntity(email,pass);
@@ -66,10 +69,10 @@ public ResponseEntity<UserEntity> Login(@PathVariable String email , @PathVariab
 		b= (BuyerEntity) BuyerRepo.findOne(buy.getEmail());
 		if(b.getPassword().equals(buy.getPassword()) )
 		{
-			return new ResponseEntity<UserEntity>(b, HttpStatus.OK);
+			return true;
 		}
 	}
-	return new ResponseEntity<UserEntity>(b, HttpStatus.BAD_REQUEST);
+	return false;
 }
 //	@RequestMapping("/buyerEntity")
 //	public String da(@ModelAttribute BuyerEntity buyer)

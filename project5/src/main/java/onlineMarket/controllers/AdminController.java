@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,7 +27,7 @@ import onlineMarket.repositories.ProductRepository;
 
 @RestController
 @RequestMapping("/admin")
-
+@CrossOrigin(origins="http://localhost:3000",allowedHeaders="*")
 public class AdminController {
 	
 	@Autowired
@@ -37,8 +38,8 @@ public class AdminController {
 	ProductRepository ProductRepo;
 	
 		
-	@RequestMapping("log/{email}/{pass}")
-	public ResponseEntity<UserEntity> Login(@PathVariable String email , @PathVariable String pass)
+	@RequestMapping("login/{email}/{pass}")
+	public boolean Login(@PathVariable String email , @PathVariable String pass)
 	{
 		UserEntity a = null;
 		UserEntity admin = new AdminEntity(email,pass);
@@ -47,10 +48,10 @@ public class AdminController {
 			a= (AdminEntity) AdminRepo.findOne(admin.getEmail());
 			if(a.getPassword().equals(admin.getPassword()) )
 			{
-				return new ResponseEntity<UserEntity>(a, HttpStatus.OK);
+				return true;
 			}
 		}
-		return new ResponseEntity<UserEntity>(a, HttpStatus.BAD_REQUEST);
+		return false;
 	}
 	
 	@RequestMapping("/userStat/sum")

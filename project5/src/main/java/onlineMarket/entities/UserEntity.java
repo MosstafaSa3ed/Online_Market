@@ -8,16 +8,18 @@ public class UserEntity {
 	@Id
 	private String Email;
 	private String Password;
-	
+	private boolean flag;
 	public UserEntity()
 	{
 		Email = "";
 		Password = "";
+		flag=false;
 	}
 	public UserEntity(String Email, String Password)
 	{
 		this.Email = Email;
 		this.Password = Password;
+		flag=false;
 		
 	}
 	public String getEmail() {
@@ -31,6 +33,12 @@ public class UserEntity {
 	}
 	public void setPassword(String Password) {
 		this.Password = Password;
+	}
+	public boolean getFlag() {
+		return flag;
+	}
+	public void setFlag(boolean flag) {
+		this.flag = flag;
 	}
 	
 
