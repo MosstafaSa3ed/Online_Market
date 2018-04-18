@@ -1,5 +1,5 @@
-export class userEntity
+export class UserEntity
 {
     email:string;
-    pass:string;
+    password:string;
 }

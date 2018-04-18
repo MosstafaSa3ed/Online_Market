@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `<button class="btn btn-primary">hello</button>
-            <router-outlet></router-outlet> `,
+  template: `<h1 style="text-align:center">Trello OnlineMarket</h1>
+              <router-outlet></router-outlet>`,
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  { }
