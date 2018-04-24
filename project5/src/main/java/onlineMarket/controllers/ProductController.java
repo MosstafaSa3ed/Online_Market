@@ -135,14 +135,16 @@ public class ProductController {
 		if(name!=null&& store!=null)
 		{	
 			List<StoreEntity> s=StoreRepo.findBySellerNameIn(buyer);
-			if(s!=null)
+			if(s.size()!=0) {
 				degree-=0.15;
+			System.out.println(s.size());
+			}
 			pro=ProductRepo.findByNameInAndStoreNameIn(name, store);
 			if(pro!=null  && pro.getCounter()>=amount )
 			{
 				if(amount>=2)
 					degree-=0.1;
-				if(s!=null)
+				if(s.size()!=0)
 				{
 					SellerEntity s2=(SellerEntity) SellerRepo.findOne(buyer);
 					if(!s2.getFlag()) {
