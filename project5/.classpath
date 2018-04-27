@@ -46,5 +46,6 @@
 	<classpathentry kind="lib" path="C:/fci.cu/3rd year/testing/libs/httpcore-4.4.6.jar"/>
 	<classpathentry kind="lib" path="C:/fci.cu/3rd year/testing/libs/okhttp-3.9.1.jar"/>
 	<classpathentry kind="lib" path="C:/fci.cu/3rd year/testing/libs/okio-1.13.0.jar"/>
+	<classpathentry kind="lib" path="C:/fci.cu/3rd year/testing/javax-inject-1.0-201002241208.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
