@@ -5,8 +5,10 @@
     <classes>
       <class name="onlineMarket.controllers.ProductControllerTest">
         <methods>
-          <include name="add"/>
+          <include name="undo_Add"/>
+          <include name="undo_Delete"/>
           <include name="setUp"/>
+          <include name="viewStat_null"/>
         </methods>
       </class> <!-- onlineMarket.controllers.ProductControllerTest -->
     </classes>
