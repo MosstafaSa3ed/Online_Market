@@ -64,20 +64,5 @@ public class SellerController {
 		}
 		return false;
 	}
-//////////////////////////////////////////
-	
-	/*@GetMapping("/AddStore")
-	public String addStore(Model model)
-	{
-		model.addAttribute("store", new StoreEntity());
-		return "AddStore";
-	}
-	
-	@GetMapping("/AddProd")
-	public String addProduct(Model model)
-	{
-		System.out.println("hello");
-		model.addAttribute("prod", new ProductEntity());
-		return "AddProd";
-	}*/
+
 }
