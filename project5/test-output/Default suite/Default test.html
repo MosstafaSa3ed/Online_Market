@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>19/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Apr 27 11:58:32 EET 2018</td>
+<td>Started on:</td><td>Fri Apr 27 18:27:25 EET 2018</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (927 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1106 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,200 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.undo_Add()'><b>undo_Add</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at onlineMarket.controllers.ProductController.Undo(ProductController.java:282)
+	at onlineMarket.controllers.ProductControllerTest.undo_Add(ProductControllerTest.java:223)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1574898980", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1574898980'><pre>java.lang.NullPointerException
+	at onlineMarket.controllers.ProductController.Undo(ProductController.java:282)
+	at onlineMarket.controllers.ProductControllerTest.undo_Add(ProductControllerTest.java:223)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.undo_Delete()'><b>undo_Delete</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at onlineMarket.controllers.ProductController.Undo(ProductController.java:295)
+	at onlineMarket.controllers.ProductControllerTest.undo_Delete(ProductControllerTest.java:231)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1619356001", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1619356001'><pre>java.lang.NullPointerException
+	at onlineMarket.controllers.ProductController.Undo(ProductController.java:295)
+	at onlineMarket.controllers.ProductControllerTest.undo_Delete(ProductControllerTest.java:231)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.viewStat_null()'><b>viewStat_null</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at onlineMarket.controllers.ProductController.viewedStat(ProductController.java:188)
+	at onlineMarket.controllers.ProductControllerTest.viewStat_null(ProductControllerTest.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1604052588", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1604052588'><pre>java.lang.NullPointerException
+	at onlineMarket.controllers.ProductController.viewedStat(ProductController.java:188)
+	at onlineMarket.controllers.ProductControllerTest.viewStat_null(ProductControllerTest.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +269,100 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='onlineMarket.controllers.ProductControllerTest.add()'><b>add</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td title='onlineMarket.controllers.ProductControllerTest.Buyer_Buy()'><b>Buyer_Buy</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
 <td></td>
 <td>0</td>
-<td>onlineMarket.controllers.ProductControllerTest@2ac273d3</td></tr>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.CollaAdd_Not_exist_prod()'><b>CollaAdd_Not_exist_prod</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.CollaAdd_exist_prod()'><b>CollaAdd_exist_prod</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.CollaAdd_wrong_Brand()'><b>CollaAdd_wrong_Brand</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.CollaDelete()'><b>CollaDelete</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.CollaDelete_No_prod()'><b>CollaDelete_No_prod</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.CollaEdit()'><b>CollaEdit</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.CollaEdit_No_prod()'><b>CollaEdit_No_prod</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.Seller_Buy()'><b>Seller_Buy</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.add_exist()'><b>add_exist</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.add_new()'><b>add_new</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.add_wrong_brand()'><b>add_wrong_brand</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.delete_Not_exist()'><b>delete_Not_exist</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.delete_Not_?Enough_amount()'><b>delete_Not_?Enough_amount</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.delete_exist()'><b>delete_exist</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.edit_Not_exist()'><b>edit_Not_exist</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.edit_exist()'><b>edit_exist</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.undo_Edit()'><b>undo_Edit</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
+<tr>
+<td title='onlineMarket.controllers.ProductControllerTest.viewStat()'><b>viewStat</b><br>Test class: onlineMarket.controllers.ProductControllerTest</td>
+<td></td>
+<td>0</td>
+<td>onlineMarket.controllers.ProductControllerTest@71423665</td></tr>
 </table><p>
 </body>
 </html>
