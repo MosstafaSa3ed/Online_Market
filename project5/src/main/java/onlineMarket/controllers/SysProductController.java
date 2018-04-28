@@ -34,19 +34,7 @@ public class SysProductController {
 		return false;
 	}
 	
-	
-//	@PostMapping("/AddSysProd")
-//	public String addProd(@ModelAttribute SysProductEntity sysProd,Model model)
-//	{
-//		model.addAttribute("SysProd", new SysProductEntity());
-//		if(!SysProductRepo.exists(sysProd.getName()) && BrandRepo.exists(sysProd.getBrand()) ) {
-//			SysProductRepo.save(sysProd);
-//			return "AdminHome";
-//		}
-//		
-//		return "AddSysProd";
-//	}
-//	
+
 	
 	
 }

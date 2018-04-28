@@ -27,15 +27,5 @@ public class BrandController {
 		}
 		return false;
 	}
-//	@PostMapping("/AddBrand")
-//	public String addBrand(@ModelAttribute BrandEntity brand,Model model)
-//	{
-//		model.addAttribute("brand", new BrandEntity());
-//		if(!BrandRepo.exists(brand.getName())) {
-//			BrandRepo.save(brand);
-//			return "AdminHome";
-//		}
-//		
-//		return "AddBrand";
-//	}
+
 }

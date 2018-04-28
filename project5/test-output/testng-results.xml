@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="815" started-at="2018-04-27T14:50:16Z" finished-at="2018-04-27T14:50:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="815" started-at="2018-04-27T14:50:16Z" finished-at="2018-04-27T14:50:17Z">
+      <class name="onlineMarket.controllers.StoreControllerTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:onlineMarket.controllers.StoreControllerTest@1610302]" name="beforeTest" is-config="true" duration-ms="678" started-at="2018-04-27T14:50:16Z" finished-at="2018-04-27T14:50:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="add1()[pri:0, instance:onlineMarket.controllers.StoreControllerTest@1610302]" name="add1" duration-ms="86" started-at="2018-04-27T14:50:17Z" finished-at="2018-04-27T14:50:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- add1 -->
+        <test-method status="PASS" signature="add2()[pri:0, instance:onlineMarket.controllers.StoreControllerTest@1610302]" name="add2" duration-ms="0" started-at="2018-04-27T14:50:17Z" finished-at="2018-04-27T14:50:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- add2 -->
+      </class> <!-- onlineMarket.controllers.StoreControllerTest -->
 <testng-results skipped="0" failed="3" ignored="0" total="22" passed="19">
   <reporter-output>
   </reporter-output>
