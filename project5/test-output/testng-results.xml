@@ -20,6 +20,122 @@
           </reporter-output>
         </test-method> <!-- add2 -->
       </class> <!-- onlineMarket.controllers.StoreControllerTest -->
+<testng-results skipped="0" failed="3" ignored="0" total="22" passed="19">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1106" started-at="2018-04-27T16:27:25Z" finished-at="2018-04-27T16:27:26Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1106" started-at="2018-04-27T16:27:25Z" finished-at="2018-04-27T16:27:26Z">
+      <class name="onlineMarket.controllers.ProductControllerTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="setUp" is-config="true" duration-ms="925" started-at="2018-04-27T18:27:25Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Buyer_Buy()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="Buyer_Buy" duration-ms="68" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Buyer_Buy -->
+        <test-method status="PASS" signature="CollaAdd_Not_exist_prod()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="CollaAdd_Not_exist_prod" duration-ms="5" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CollaAdd_Not_exist_prod -->
+        <test-method status="PASS" signature="CollaAdd_exist_prod()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="CollaAdd_exist_prod" duration-ms="3" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CollaAdd_exist_prod -->
+        <test-method status="PASS" signature="CollaAdd_wrong_Brand()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="CollaAdd_wrong_Brand" duration-ms="2" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CollaAdd_wrong_Brand -->
+        <test-method status="PASS" signature="CollaDelete()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="CollaDelete" duration-ms="2" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CollaDelete -->
+        <test-method status="PASS" signature="CollaDelete_No_prod()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="CollaDelete_No_prod" duration-ms="3" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CollaDelete_No_prod -->
+        <test-method status="PASS" signature="CollaEdit()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="CollaEdit" duration-ms="1" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CollaEdit -->
+        <test-method status="PASS" signature="CollaEdit_No_prod()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="CollaEdit_No_prod" duration-ms="2" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CollaEdit_No_prod -->
+        <test-method status="PASS" signature="Seller_Buy()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="Seller_Buy" duration-ms="2" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Seller_Buy -->
+        <test-method status="PASS" signature="add_exist()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="add_exist" duration-ms="7" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- add_exist -->
+        <test-method status="PASS" signature="add_new()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="add_new" duration-ms="7" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- add_new -->
+        <test-method status="PASS" signature="add_wrong_brand()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="add_wrong_brand" duration-ms="8" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- add_wrong_brand -->
+        <test-method status="PASS" signature="delete_Not_exist()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="delete_Not_exist" duration-ms="1" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delete_Not_exist -->
+        <test-method status="PASS" signature="delete_Not_ُEnough_amount()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="delete_Not_ُEnough_amount" duration-ms="2" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delete_Not_ُEnough_amount -->
+        <test-method status="PASS" signature="delete_exist()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="delete_exist" duration-ms="1" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delete_exist -->
+        <test-method status="PASS" signature="edit_Not_exist()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="edit_Not_exist" duration-ms="1" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- edit_Not_exist -->
+        <test-method status="PASS" signature="edit_exist()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="edit_exist" duration-ms="2" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- edit_exist -->
+        <test-method status="FAIL" signature="undo_Add()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="undo_Add" duration-ms="4" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerExceptionat onlineMarket.controllers.ProductController.Undo(ProductController.java:282)at onlineMarket.controllers.ProductControllerTest.undo_Add(ProductControllerTest.java:223)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- undo_Add -->
+        <test-method status="FAIL" signature="undo_Delete()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="undo_Delete" duration-ms="3" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerExceptionat onlineMarket.controllers.ProductController.Undo(ProductController.java:295)at onlineMarket.controllers.ProductControllerTest.undo_Delete(ProductControllerTest.java:231)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- undo_Delete -->
+        <test-method status="PASS" signature="undo_Edit()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="undo_Edit" duration-ms="2" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- undo_Edit -->
+        <test-method status="PASS" signature="viewStat()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="viewStat" duration-ms="1" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewStat -->
+        <test-method status="FAIL" signature="viewStat_null()[pri:0, instance:onlineMarket.controllers.ProductControllerTest@71423665]" name="viewStat_null" duration-ms="0" started-at="2018-04-27T18:27:26Z" finished-at="2018-04-27T18:27:26Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerExceptionat onlineMarket.controllers.ProductController.viewedStat(ProductController.java:188)at onlineMarket.controllers.ProductControllerTest.viewStat_null(ProductControllerTest.java:158)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewStat_null -->
+      </class> <!-- onlineMarket.controllers.ProductControllerTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

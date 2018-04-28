@@ -9,6 +9,17 @@
           <include name="add2"/>
         </methods>
       </class> <!-- onlineMarket.controllers.StoreControllerTest -->
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="onlineMarket.controllers.ProductControllerTest">
+        <methods>
+          <include name="undo_Add"/>
+          <include name="undo_Delete"/>
+          <include name="setUp"/>
+          <include name="viewStat_null"/>
+        </methods>
+      </class> <!-- onlineMarket.controllers.ProductControllerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

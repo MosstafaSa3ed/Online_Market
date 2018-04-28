@@ -1,31 +1,27 @@
 package onlineMarket.controllers;
 
-import javax.validation.Valid;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
+import onlineMarket.entities.ActionEntity;
+import onlineMarket.entities.BuyerEntity;
+import onlineMarket.entities.ProductEntity;
+import onlineMarket.entities.SellerEntity;
+import onlineMarket.entities.StoreEntity;
+import onlineMarket.entities.SysProductEntity;
 import onlineMarket.repositories.ActionRepository;
 import onlineMarket.repositories.BrandRepository;
 import onlineMarket.repositories.BuyerRepository;
 import onlineMarket.repositories.ProductRepository;
 import onlineMarket.repositories.SellerRepository;
 import onlineMarket.repositories.StoreRepository;
-import onlineMarket.repositories.SysProductRepository;
-import onlineMarket.entities.*;;
+import onlineMarket.repositories.SysProductRepository;;
 @RestController
 @RequestMapping("/sellers")
 @CrossOrigin(origins="http://localhost:3000",allowedHeaders="*") 
@@ -135,14 +131,15 @@ public class ProductController {
 		if(name!=null&& store!=null)
 		{	
 			List<StoreEntity> s=StoreRepo.findBySellerNameIn(buyer);
-			if(s!=null)
+			if(s.size()!=0) {
 				degree-=0.15;
+			}
 			pro=ProductRepo.findByNameInAndStoreNameIn(name, store);
 			if(pro!=null  && pro.getCounter()>=amount )
 			{
 				if(amount>=2)
 					degree-=0.1;
-				if(s!=null)
+				if(s.size()!=0)
 				{
 					SellerEntity s2=(SellerEntity) SellerRepo.findOne(buyer);
 					if(!s2.getFlag()) {

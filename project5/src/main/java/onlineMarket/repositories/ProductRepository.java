@@ -1,9 +1,6 @@
 package onlineMarket.repositories;
 
 import java.util.List;
-import java.util.Vector;
-
-import javax.transaction.Transactional;
 
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
