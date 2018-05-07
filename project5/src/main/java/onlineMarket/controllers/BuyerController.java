@@ -67,10 +67,4 @@ public boolean Login(@PathVariable String email , @PathVariable String pass)
 	}
 	return false;
 }
-//	@RequestMapping("/buyerEntity")
-//	public String da(@ModelAttribute BuyerEntity buyer)
-//	{
-//		System.out.println("hello "+buyer.getEmail());
-//		return "try";
-//	}
 }

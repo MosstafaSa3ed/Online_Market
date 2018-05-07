@@ -133,7 +133,6 @@ public class ProductController {
 			List<StoreEntity> s=StoreRepo.findBySellerNameIn(buyer);
 			if(s.size()!=0) {
 				degree-=0.15;
-			System.out.println(s.size());
 			}
 			pro=ProductRepo.findByNameInAndStoreNameIn(name, store);
 			if(pro!=null  && pro.getCounter()>=amount )
